@@ -1,0 +1,193 @@
+{
+  "baseline": {
+    "temperature": 0.7232986261971919,
+    "splits": {
+      "test_seen": {
+        "accuracy": 0.9526666666666667,
+        "macro_f1": 0.9546132695701176,
+        "ece_raw": 0.025411741336896103,
+        "ece_temp_scaled": 0.013449549142521536,
+        "routing": {
+          "0.98": {
+            "threshold": 0.3803145070363001,
+            "coverage": 0.9686666666666667,
+            "auto_accuracy": 0.9779766001376462,
+            "review_rate": 0.03133333333333333,
+            "review_accuracy": 0.1702127659574468,
+            "overall_accuracy": 0.9526666666666667
+          },
+          "0.99": {
+            "threshold": 0.47211620989343855,
+            "coverage": 0.962,
+            "auto_accuracy": 0.9833679833679834,
+            "review_rate": 0.038,
+            "review_accuracy": 0.17543859649122806,
+            "overall_accuracy": 0.9526666666666667
+          },
+          "0.995": {
+            "threshold": 0.5945507310488114,
+            "coverage": 0.9486666666666667,
+            "auto_accuracy": 0.9908643710470836,
+            "review_rate": 0.051333333333333335,
+            "review_accuracy": 0.24675324675324675,
+            "overall_accuracy": 0.9526666666666667
+          }
+        }
+      },
+      "test_unseen": {
+        "accuracy": 0.7793333333333333,
+        "macro_f1": 0.7913486318456959,
+        "ece_raw": 0.14992600785062987,
+        "ece_temp_scaled": 0.0689173022395091,
+        "routing": {
+          "0.98": {
+            "threshold": 0.3803145070363001,
+            "coverage": 0.8846666666666667,
+            "auto_accuracy": 0.8364732479276563,
+            "review_rate": 0.11533333333333333,
+            "review_accuracy": 0.34104046242774566,
+            "overall_accuracy": 0.7793333333333333
+          },
+          "0.99": {
+            "threshold": 0.47211620989343855,
+            "coverage": 0.8266666666666667,
+            "auto_accuracy": 0.8580645161290322,
+            "review_rate": 0.17333333333333334,
+            "review_accuracy": 0.40384615384615385,
+            "overall_accuracy": 0.7793333333333333
+          },
+          "0.995": {
+            "threshold": 0.5945507310488114,
+            "coverage": 0.722,
+            "auto_accuracy": 0.8901200369344414,
+            "review_rate": 0.278,
+            "review_accuracy": 0.49160671462829736,
+            "overall_accuracy": 0.7793333333333333
+          }
+        }
+      }
+    },
+    "thresholds": {
+      "0.98": 0.3803145070363001,
+      "0.99": 0.47211620989343855,
+      "0.995": 0.5945507310488114
+    }
+  },
+  "finbert": {
+    "temperature": 0.831430940399249,
+    "splits": {
+      "test_seen": {
+        "accuracy": 0.9533333333333334,
+        "macro_f1": 0.9583000356312495,
+        "ece_raw": 0.019357007334629674,
+        "ece_temp_scaled": 0.01505914330482486,
+        "routing": {
+          "0.98": {
+            "threshold": 0.40460628271102905,
+            "coverage": 0.9766666666666667,
+            "auto_accuracy": 0.9706484641638226,
+            "review_rate": 0.023333333333333334,
+            "review_accuracy": 0.22857142857142856,
+            "overall_accuracy": 0.9533333333333334
+          },
+          "0.99": {
+            "threshold": 0.6273587346076965,
+            "coverage": 0.95,
+            "auto_accuracy": 0.9901754385964913,
+            "review_rate": 0.05,
+            "review_accuracy": 0.25333333333333335,
+            "overall_accuracy": 0.9533333333333334
+          },
+          "0.995": {
+            "threshold": 0.7713689208030701,
+            "coverage": 0.936,
+            "auto_accuracy": 0.9964387464387464,
+            "review_rate": 0.064,
+            "review_accuracy": 0.3229166666666667,
+            "overall_accuracy": 0.9533333333333334
+          }
+        }
+      },
+      "test_unseen": {
+        "accuracy": 0.794,
+        "macro_f1": 0.7800778335451066,
+        "ece_raw": 0.05402083173394204,
+        "ece_temp_scaled": 0.08231167072057728,
+        "routing": {
+          "0.98": {
+            "threshold": 0.40460628271102905,
+            "coverage": 0.9466666666666667,
+            "auto_accuracy": 0.8246478873239437,
+            "review_rate": 0.05333333333333334,
+            "review_accuracy": 0.25,
+            "overall_accuracy": 0.794
+          },
+          "0.99": {
+            "threshold": 0.6273587346076965,
+            "coverage": 0.8433333333333334,
+            "auto_accuracy": 0.8766798418972332,
+            "review_rate": 0.15666666666666668,
+            "review_accuracy": 0.34893617021276596,
+            "overall_accuracy": 0.794
+          },
+          "0.995": {
+            "threshold": 0.7713689208030701,
+            "coverage": 0.7886666666666666,
+            "auto_accuracy": 0.9036348267117498,
+            "review_rate": 0.21133333333333335,
+            "review_accuracy": 0.38485804416403785,
+            "overall_accuracy": 0.794
+          }
+        }
+      }
+    },
+    "thresholds": {
+      "0.98": 0.40460628271102905,
+      "0.99": 0.6273587346076965,
+      "0.995": 0.7713689208030701
+    },
+    "train_meta": {
+      "base_model": "ProsusAI/finbert",
+      "epochs": 3,
+      "lr": 3e-05,
+      "batch": 32,
+      "max_len": 48,
+      "device": "mps",
+      "train_seconds": 248.9,
+      "n_params": 109491468
+    }
+  },
+  "finbert_seeds": {
+    "runs": {
+      "finbert": {
+        "val": 0.9626666666666667,
+        "test_seen": 0.9533333333333334,
+        "test_unseen": 0.794
+      },
+      "finbert_s43": {
+        "val": 0.9686666666666667,
+        "test_seen": 0.954,
+        "test_unseen": 0.8086666666666666
+      },
+      "finbert_s44": {
+        "val": 0.966,
+        "test_seen": 0.9566666666666667,
+        "test_unseen": 0.8153333333333334
+      }
+    },
+    "summary": {
+      "val": {
+        "mean": 0.9657777777777777,
+        "std": 0.0030061665018819308
+      },
+      "test_seen": {
+        "mean": 0.9546666666666667,
+        "std": 0.0017638342073763883
+      },
+      "test_unseen": {
+        "mean": 0.806,
+        "std": 0.010913803695829918
+      }
+    }
+  }
+}
